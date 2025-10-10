@@ -22,6 +22,7 @@
     telescope
     treesitter
     trim
+    zellij-nav
   ];
 
   plugins = {
