@@ -3,6 +3,7 @@
   imports = with modules; [
     barbar
     catppuccin
+    claude
     colorizer
     comment
     floaterm

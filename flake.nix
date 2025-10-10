@@ -2,6 +2,7 @@
   description = "My neovim setup";
 
   inputs = {
+
     blueprint = {
       url = "github:numtide/blueprint";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,5 +25,6 @@
     inputs:
     inputs.blueprint {
       inherit inputs;
+      nixpkgs.config.allowUnfree = true;
     };
 }

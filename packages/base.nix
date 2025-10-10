@@ -1,8 +1,8 @@
 {
+  flake,
   inputs,
   system,
   pkgs,
-  flake,
   ...
 }:
 let
@@ -10,6 +10,7 @@ let
   module = {
     inherit pkgs;
     extraSpecialArgs = {
+      inherit inputs system;
       modules = flake.modules.nixvim;
     };
 
