@@ -7,7 +7,7 @@
     servers = {
       lua_ls = {
         enable = true;
-        settings.settings.diagnostics.globals = [ "vim" ];
+        config.settings.diagnostics.globals = [ "vim" ];
       };
     };
 
