@@ -8,6 +8,7 @@
     comment
     floaterm
     gitsigns
+    git-worktree
     harpoon
     lazygit
     lsp
