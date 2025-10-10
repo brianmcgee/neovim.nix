@@ -9,6 +9,7 @@
     floaterm
     gitsigns
     harpoon
+    lazygit
     lsp
     lualine
     markdown-preview

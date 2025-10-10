@@ -1,0 +1,12 @@
+_: {
+  plugins.lazygit.enable = true;
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>gg";
+      action = "<CMD>LazyGit<CR>";
+      options.desc = "LazyGit";
+    }
+  ];
+}
