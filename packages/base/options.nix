@@ -25,6 +25,7 @@
     splitbelow = true; # A new window is put below the current one
     splitright = true; # A new window is put right of the current one
 
+    autoread = true; # Reload buffer when the underlying file changes outside Neovim
     swapfile = false; # Disable the swap file
     modeline = true; # Tags such as 'vim:ft=sh'
     modelines = 100; # Sets the type of modelines

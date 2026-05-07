@@ -21,5 +21,24 @@
       ];
       command = "setlocal spell spelllang=en";
     }
+
+    # Trigger autoread checks so externally modified files reload promptly.
+    # 'autoread' alone only acts when Neovim is otherwise prompted; checktime
+    # forces the check on focus/buffer entry and while idle.
+    {
+      event = [
+        "FocusGained"
+        "BufEnter"
+        "CursorHold"
+        "CursorHoldI"
+      ];
+      command = "if mode() !~ '\\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif";
+    }
+
+    # Notify when a buffer was reloaded due to an external change
+    {
+      event = "FileChangedShellPost";
+      command = "echohl WarningMsg | echo 'File changed on disk. Buffer reloaded.' | echohl None";
+    }
   ];
 }
