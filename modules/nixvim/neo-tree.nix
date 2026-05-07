@@ -18,6 +18,10 @@
         auto_expand_width = true;
       };
       filesystem = {
+        follow_current_file = {
+          enabled = true;
+          leave_dirs_open = true;
+        };
         use_libuv_file_watcher = true;
       };
     };
