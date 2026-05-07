@@ -22,6 +22,7 @@
     telescope
     treesitter
     trim
+    which-key
     zellij-nav
   ];
 

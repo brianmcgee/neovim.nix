@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   plugins = {
     treesitter = {
@@ -5,20 +6,22 @@
 
       nixvimInjections = true;
 
+      # Tiny core: enough grammars to comfortably edit this flake itself.
+      # Language-specific grammars are added by `mkNvim`'s `grammars` argument.
+      grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
+        lua
+        markdown
+        markdown_inline
+        nix
+        vim
+        vimdoc
+      ];
+
       settings = {
         highlight.enable = true;
         indent.enable = true;
       };
-      folding = true;
-    };
-
-    treesitter-refactor = {
-      enable = true;
-      highlightDefinitions = {
-        enable = true;
-        # Set to false if you have an `updatetime` of ~100.
-        clearOnCursorMove = false;
-      };
+      folding.enable = true;
     };
 
     hmts.enable = true;

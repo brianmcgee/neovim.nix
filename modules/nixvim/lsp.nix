@@ -9,6 +9,8 @@
         enable = true;
         config.settings.diagnostics.globals = [ "vim" ];
       };
+
+      nixd.enable = true;
     };
 
     keymaps =

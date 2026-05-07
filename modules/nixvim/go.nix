@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 let
-  package = pkgs.vimUtils.buildVimPlugin {
+  vim-go = pkgs.vimUtils.buildVimPlugin {
     name = "vim-go";
     src = pkgs.fetchFromGitHub {
       owner = "fatih";
@@ -11,14 +11,11 @@ let
   };
 in
 {
-
-  extraPlugins = [ package ];
-
-  extraConfigLua = ''
-
-  '';
-
-  plugins.lsp.servers.gopls.enable = true;
+  extraPlugins = [ vim-go ];
 
   lsp.servers.gopls.enable = true;
+
+  plugins.treesitter.grammarPackages = [
+    config.plugins.treesitter.package.builtGrammars.go
+  ];
 }
