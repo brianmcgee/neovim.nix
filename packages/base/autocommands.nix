@@ -22,6 +22,14 @@
       command = "setlocal spell spelllang=en";
     }
 
+    # Match nixfmt's 2-space indentation for Nix files (the project-wide
+    # default is 4, which suits prettier-formatted languages).
+    {
+      event = "FileType";
+      pattern = "nix";
+      command = "setlocal tabstop=2 shiftwidth=2 softtabstop=2";
+    }
+
     # Trigger autoread checks so externally modified files reload promptly.
     # 'autoread' alone only acts when Neovim is otherwise prompted; checktime
     # forces the check on focus/buffer entry and while idle.
