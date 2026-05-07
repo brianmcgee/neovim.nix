@@ -28,6 +28,11 @@
       ];
       set_env.COLORTERM = "truecolor";
     };
+
+    settings.pickers.buffers = {
+      sort_mru = true;
+      ignore_current_buffer = true;
+    };
   };
 
   # Find TODOs
