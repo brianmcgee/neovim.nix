@@ -17,6 +17,9 @@
         width = 30;
         auto_expand_width = true;
       };
+      filesystem = {
+        use_libuv_file_watcher = true;
+      };
     };
   };
 
