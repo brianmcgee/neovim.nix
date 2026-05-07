@@ -22,6 +22,7 @@
     startify
     telescope
     treesitter
+    treesitter-textobjects
     trim
     which-key
     zellij-nav
