@@ -24,6 +24,5 @@
       folding.enable = true;
     };
 
-    hmts.enable = true;
   };
 }

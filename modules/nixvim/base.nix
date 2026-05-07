@@ -3,7 +3,7 @@
   imports = with modules; [
     barbar
     catppuccin
-    claude
+    claudecode
     colorizer
     comment
     floaterm
@@ -16,6 +16,7 @@
     markdown-preview
     neorg
     neo-tree
+    nix-injections
     oil
     snacks
     startify
