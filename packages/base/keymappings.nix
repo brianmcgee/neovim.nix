@@ -74,7 +74,17 @@
             # sort
             "<leader>s" = ":sort<CR>";
           };
+      terminal =
+        lib.mapAttrsToList
+          (key: action: {
+            mode = "t";
+            inherit action key;
+          })
+          {
+            # leave terminal-mode (claude, floaterm, lazygit, :terminal)
+            "<Esc><Esc>" = "<C-\\><C-n>";
+          };
     in
-    lib.nixvim.keymaps.mkKeymaps { options.silent = true; } (normal ++ visual);
+    lib.nixvim.keymaps.mkKeymaps { options.silent = true; } (normal ++ visual ++ terminal);
 
 }
